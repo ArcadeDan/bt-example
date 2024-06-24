@@ -2,10 +2,12 @@
 name = "bt-example"
 version = "0.1.0"
 description = ""
+authors = ["Dan"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.8,<3.13"
+bleak = "0.22.2"
 
 
 [build-system]
