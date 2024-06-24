@@ -5,14 +5,13 @@ client = socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_R
 client.connect(("78:AF:08:D6:54:56", 4))
 
 try:
-        while True:
-                message = input("Enter Message: ")
-                client.send(message.encode("utf-8"))
-                data = client.recv(1024)
-                if not data:
-                        break
-
-                print(f"Message: {data.decode('utf-8')}")
+    while True:
+        message = input("Enter Message: ")
+        client.send(message.encode("utf-8"))
+        data = client.recv(1024)
+        if not data:
+            break
+        print(f"Message: {data.decode('utf-8')}")
 
 except OSError as e:
     pass
